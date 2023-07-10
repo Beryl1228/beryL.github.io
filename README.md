@@ -1,3 +1,7 @@
+# Dice Game
+
+Github Page: https://beryl1228.github.io
+
 ### `Game Setup`
 The game is played in a web browser.
 The game uses HTML, CSS, and JavaScript.
