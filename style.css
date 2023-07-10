@@ -1,0 +1,176 @@
+body {
+  background: hsl(136, 31%, 84%);
+  overflow: hidden;
+}
+
+.dice-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  /* decide the perspective of the dice to left and top for 50% */
+  transform: translate3d(-50%, -50%, 0); 
+  /* making sure 3D effect */
+  transform-style: preserve-3d; 
+}
+
+.cubic {
+  margin: 1em;
+  width: 50px;
+  height: 50px;
+  /* 表示绕Y轴和X轴旋转-20度(也就是逆时针旋转） rotate Y for counterclockwise 10deg */
+  transform-style: preserve-3d;
+  transform: rotateX(-65deg) rotateY(45deg) rotateZ(90deg);
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  /* animation: rotate-cube 10s linear infinite; */
+}
+
+
+.cubic > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(233, 235, 237);
+  border: 1px solid #efe9e9;
+}
+
+
+
+.front {
+  transform: translateZ(25px);
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Dice-1.svg/640px-Dice-1.svg.png");
+  background-size: 50px;
+
+}
+
+.back {
+  transform: translateZ(-25px);
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Dice-4.svg/640px-Dice-4.svg.png");
+  background-size: 50px; 
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(25px);
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Dice-5-b.svg/640px-Dice-5-b.svg.png");
+  background-size: 50px;  
+}
+
+.bottom {
+  transform: rotateX(90deg) translateZ(-25px);
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Dice-2-b.svg/640px-Dice-2-b.svg.png");
+  background-size: 50px;
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(25px);
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Dice-3-b.svg/640px-Dice-3-b.svg.png");
+  background-size: 50px;
+}
+
+
+.left {
+  transform: rotateY(90deg) translateZ(-25px);
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dice-6a-b.svg/640px-Dice-6a-b.svg.png");
+  background-size: 50px;
+}
+/* making animation for the cube to roll */
+/* @keyframes rotate-cube{
+  form{
+      transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+  }
+
+  to{
+    transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+  }
+} 
+*/
+
+h1,h2,h3{
+  position: relative;
+  width: 100%;
+  top:2em;
+  text-align: center;
+}
+
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #3e5b49;
+}
+
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: #925f44;
+}
+
+h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:30px;
+  font-weight: 400;
+  color: #2f1fc2;
+  background-color: #dede49;
+  width:450px;
+  top:150px;
+  text-align: center;
+  left: 35%;
+}
+
+#ctrl{
+  position: absolute;
+  bottom: 6em;
+  width: 100%;
+  text-align: center;
+}
+
+#playBtn {
+  display: inline-block;
+  padding: 1em 4em;
+  margin-right: 1em;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  outline: none;
+}
+
+#continueBtn {
+  display: inline-block;
+  padding: 1em 3em;
+  margin-right: 1em;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #5a5656;
+  background-color: #dede49;
+  border-color: #adb197;
+  outline: none;
+}
+
+
+#Music{
+  position: fixed;
+  top:20px;
+  right:20px;
+};
+

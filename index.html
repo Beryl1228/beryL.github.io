@@ -1,5 +1,50 @@
-<html>
-  <body>
-    <h1>dice game</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Your Dice !!!</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+<body>
+    <h1>Rolling Your Dice !</h1>
+    <h2>Who got 12 first, shall be the winner!</h2>
+    <h3> </h3>
+    <div id="Music">
+    <button id="playMusic">
+        <audio id="bg-music" src="https://cdn.pixabay.com/audio/2022/03/24/audio_ffd26ef661.mp3" autoplay></audio>Play Music</button>
+    <button id="pauseMusic">Pause Music</button>
+    </div>
+    <div class="dice-wrapper">
+        <div class="cubic" id ='cube1'>
+            <div class="front" num ="1"></div>
+            <div class="back" num ="4"></div>
+            <div class="right" num ="3"></div>
+            <div class="left" num ="6"></div>
+            <div class="top" num ="5"></div>
+            <div class="bottom" num ="2"></div>   
+        </div>
+        <div class="cubic" id ='cube2'>
+            <div class="front" num ="1"></div>
+            <div class="back" num ="4"></div>
+            <div class="right" num ="3"></div>
+            <div class="left" num ="6"></div>
+            <div class="top" num ="5"></div>
+            <div class="bottom" num ="2"></div> 
+        </div>
+        <div class="cubic" id ='cube3'>
+            <div class="front" num ="1"></div>
+            <div class="back" num ="4"></div>
+            <div class="right" num ="3"></div>
+            <div class="left" num ="6"></div>
+            <div class="top" num ="5"></div>
+            <div class="bottom" num ="2"></div> 
+        </div>
+    </div>
+
+    <footer id="ctrl">
+      <button id="playBtn"><audio id="rollingMusic" src="https://cdn.pixabay.com/audio/2022/03/24/audio_3c05fb9e91.mp3"></audio>Play</button>
+      <button id="continueBtn" disabled>Continue</button>
+</body>
 </html>
