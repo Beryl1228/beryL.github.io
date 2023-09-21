@@ -23,7 +23,7 @@ for (var i = 0; i< item.length; i++){
    // Add order properties to the cart
    cartHTML += "<td>"+itemDescription[i]+"</td>"+"<td>$"+itemPrice[i]+"</td>"+"<td>"+itemQty[i]+"</td>";
    var itemCost = itemPrice[i]*itemQty[i];
-   cartHTML += "<td>$"+item[i]+"</td></tr>";
+   cartHTML += "<td>"+itemCost+"</td></tr>";
    ordertTotal += itemCost; 
 }
 
